@@ -1,77 +1,66 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
+theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: /assets/images/devops-titre.jpg
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Introduction au DevOps
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  Cours d'introduction au DevOps pour les étudiants de M1 MIAGE de Grenoble.
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+  Réalisé par Romain BADINO
+
+  https://badroro.github.io/devops-introduction
 class: text-center
 # https://sli.dev/features/drawing
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
+transition: fade-out
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
 # take snapshot for each slide in the overview
 overviewSnapshots: true
+addons:
+    - slidev-addon-qrcode
 ---
 
-# Welcome to Slidev
-
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+# Introduction au DevOps
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# Qui je suis ?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
 <br>
+<br><br>
+<br>
+<v-click>
+
+-  Développeur FullStack à la SNCF
+</v-click>
+<br>
+<v-click>
+
+
+-  Reconversion professionnelle au sein de la SNCF
+
+</v-click>
+<br>
+<v-click>
+
+-  Ancien étudiant de la MIAGE de Grenoble
+</v-click>
+
+<br>
+<br><br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+<v-click>
+<span>Et vous qu'est ce que vous voulez faire après votre master ?</span>
+</v-click>
 
 <style>
 h1 {
@@ -83,559 +72,1193 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
+
+span {align-self: end;}
+
 </style>
 
 <!--
-Here is another comment.
+[click:4] Dev, Ops, BI, Data, PO ou Chef de projet, autres ?
 -->
 
 ---
-transition: slide-up
-level: 2
+layout: statement
 ---
 
-# Navigation
+# C'est quoi le DevOps ?
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
 
-## Keyboard Shortcuts
+<!--
+Pour vous
+Quand on parle d'un ingénieur DevOps, vous pensez à quoi ? 
+On va voir si vous avez raison ou pas
+-->
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+---
+layout: section
+transition: slide-up
+---
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+# Histoire du DevOps
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Origine du DevOps
+
+<br>
+<br>
+
+Le mouvement DevOps est issu d'une succession de conférences, dont les DevOpsDays, qui se sont déroulées à partir de 2008.
+
+Contrairement à ITIL ou Agile, le DevOps n’a ni norme ni manifeste, mais repose sur une philosophie de collaboration.
+
+Remettons tout de suite les choses en place !
+
+<span v-mark.circle.red="1">Devops n'est pas une méthode, c'est un mouvement, une culture.</span>
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!--
+Fun fact : Andrew Shafer organisateur de la première conférence “Agile Infrastructure.” en aout 2008 à Toronto. Il n'y eut qu'une seule personne présente Patrick Debois qui est à l'origine du mot DevOps en créant les DevOpsDays.
+-->
+
+---
+layout: default
+transition: slide-up
+---
+
+# Origine du DevOps
+
+Lors de ces conférence, le constat qu'ils tiraient est que le cloisonnement des équipes de développement (Dev) et des opérations (Ops) était contre-productif car leurs méthodes de travail s'opposaient.
+
+<br>
+<br>
+
+- Cloisonnement entre équipes Dev (rapides, axées sur les fonctionnalités) et Ops (stabilité, méthodes traditionnelles).
+
+<br>
+
+- Mises en production complexes et fréquents incidents dus à des incompréhensions.
+
+<br>
+
+- Faible vélocité à cause d’une communication limitée (via tickets et demandes de services).
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: default
+transition: fade-out
+---
+
+# Origine du DevOps
+
+le DevOps tire ses racines des différentes méthodes d'organisation du travail, et des méthodes de gestion de projets Agile.
+
+- Héritage industriel :
+
+  - Taylorisme : Organisation stricte et répétitive, mais limitant l’innovation.
+  - Toyotisme (Lean) : Optimisation continue, réduction des gaspillages, et amélioration collaborative (Kaizen).
+
+<br>
+
+- Influences Agile :
+
+  - Flexibilité, itérations courtes, et collaboration étroite avec les parties prenantes.
+  - Priorité aux interactions, logiciels opérationnels, et adaptation au changement.
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!-- Lean => Supprimé le gaspillage, Amélioration continue, PDCA (roue de Deming) 
+Agilité =>- manifeste Agile ? 2001
+ -->
+
+---
+layout: section
+transition: slide-up
+---
+
+# Pourquoi la démarche DevOps est-elle apparue ?
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Opposition Dev vs Ops
+
+Comme on a vu brièvement, les équipes Dev et Ops ont des objectifs différents.
+
+<br>
+
+- Les développeurs : en charge d'écrire du code, d'apporter de <span v-mark.blue="1">nouvelles fonctionnalités</span> et de corriger des bugs. Leurs préoccupations : apportés <span v-mark.blue="1">le plus rapidement</span> des <span v-mark.blue="1">changements</span> pour répondre aux besoins du client.
+
+
+- Les opérations : en charge de créer et de <span v-mark.green="2">maintenir</span> les infrastructures hébergeant ces applications. Leurs préoccupations : <span v-mark.green="2">stabiliser et garantir la disponibilité</span> de celle-ci pour répondre aux exigences du client. Dans les opérationnelles, on trouve les personnes en charge d'administrer, de sécuriser et de connecter les équipements.
+
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+
+---
+layout: default
+transition: fade-out
+---
+
+# Un conflit de méthodologies
+
+À cette époque, le décalage entre les méthodes des développeurs (Dev) et des équipes d’opérations (Ops) est de plus en plus présent.  
+
+<br>
+
+- Les **Dev**, de plus en plus tournés vers l’Agile, cherchaient à livrer rapidement des mises à jour et de nouvelles fonctionnalités. Cette approche itérative augmentait la fréquence des mises en production.  
+
+<br>
+<br>
+
+- De leur côté, les **Ops** restaient attachées à des méthodes en cascade. Monter et maintenir des infrastructures à cette époque était complexe, chronophage, et nécessitait des ressources importantes.
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+
+---
+layout: section
+transition: slide-up
+---
+
+# Les principes du DevOps
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!-- Toutes ces divergences, entre dev et ops, ont entrainées de nombre discussion lors des différentes conférences sur le sujet. Dans vos entreprises, comment ça se passe ? -->
 
 ---
 layout: two-cols
-layoutClass: gap-16
+transition: slide-up
 ---
 
-# Table of contents
+# Apparition des principes
 
-You can use the `Toc` component to generate a table of contents for your slides:
+C'est en 2010 que les principes fondateurs du DevOps ont été posé.
 
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
+Ils sont résumé par l'acronyme **CAMS**, qui signifie :
+- **Culture**,
+- **Automation**,
+- **Measures**
+- and **Share**.
+  
+ <br>
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+En 2016, cet acronyme évolue avec l’ajout du **Lean**, pour former l'acronyme **CALMS**.
 
 ::right::
 
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
+</div>
 
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
+h1 {
+  color: #2B90B6;
 }
-.footnotes {
-  @apply text-sm opacity-75;
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
 }
-.footnote-backref {
-  display: none;
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+}
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
 }
 </style>
 
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
+<!-- Attention quand je dis posé, je ne parle pas de norme ou de méthode, mais de principes qui ont été énoncés et ont commencé à faire consensus. 
 -->
 
 ---
-level: 2
+layout: two-cols
+transition: slide-up
 ---
 
-# Shiki Magic Move
+# Culture
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+Il s'agit du principe sur lequel tout repose.
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+Sans cette Culture, toutes les tentatives de l'adopter seront vaines.
 
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
+Sans appui des dirigeants tout projet est voué à l'échec.
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
+Le DevOps appelle à un renforcement de la collaboration entre deux équipes, que sont les Dev et les Ops.
+
+Cela ne peut se faire sans cet appui.
+
+
+::right::
+
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
+</div>
+
+<style>
+h1 {
+  color: #2B90B6;
 }
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
 }
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+  opacity: 0.5;
 }
-</script>
-```
-````
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+</style>
 
 ---
+layout: two-cols
+transition: slide-up
+---
 
-# Components
+# Automatisation
 
-<div grid="~ cols-2 gap-4">
-<div>
+C'est souvent le 1er principe qui vient à l'esprit quand on parle de DevOps.
 
-You can use Vue components directly inside your slides.
+<br>
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+L'automatisation consiste à libérer les équipes des tâches répétitives et sans véritables valeurs ajoutées.
 
-```html
-<Counter :count="10" />
-```
+<br>
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
+Il s’agit aussi de donner aux gens les moyens de faire se concentrer sur celles qui ont réellement de la valeur.
 
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
+::right::
 
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
 </div>
-<div>
 
-```html
-<Tweet id="1390115482657726468" />
-```
+<style>
+h1 {
+  color: #2B90B6;
+}
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
+}
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+}
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+  opacity: 0.5;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+</style>
 
-<Tweet id="1390115482657726468" scale="0.65" />
+---
+layout: two-cols
+transition: slide-up
+---
 
+# Lean
+
+Ce principe tire ses origines des méthodes de production de Toyota.
+
+<br>
+
+Le lean signifie "sans gras", c’est une méthode de gestion de la production qui se concentre sur la "chasse aux gaspillages".
+
+<br>
+
+Ce principe de rationalisation cherche à réduire des excès, en limitant au minimum le nombre et la durée des réunions, la taille des équipes et le nombre d'outils susceptibles de fournir les résultats attendus.
+
+::right::
+
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
 </div>
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
+}
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+}
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+  opacity: 0.5;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+</style>
+
+---
+layout: two-cols
+transition: slide-up
+---
+
+# Mesure
+
+Si vous ne pouvez pas mesurer, vous ne pouvez pas vous améliorer.
+
+<br>
+
+On ne se limite pas à mesurer le temps d’un déploiement logiciel.
+
+<br>
+
+Il faut mettre en place d'autres indicateurs pour que le processus puisse être amélioré continuellement.
+
+::right::
+
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
 </div>
 
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
+<style>
+h1 {
+  color: #2B90B6;
+}
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
+}
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+}
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+  opacity: 0.5;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+</style>
 
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
+<!-- 
+Tout d’abord le délai de changement, donc le temps entre le commit du code et la mise en production
+La fréquence de déploiement, donc à quel intervalle le code est déployé en production
+Le temps de récupération, c'est-à-dire le temps nécessaire pour restaurer le service après un incident
+Le taux d’échec des changements ou le pourcentage des changements qui diminue le service ou requièrent une intervention -->
+
+---
+layout: two-cols
+transition: slide-up
+---
+
+# Partage
+
+L'objectif est de créer une contribution partagée.
+
+<br>
+
+Les gens sont prêts à travailler ensemble si leurs pensées et leurs opinions sont entendues.
+Ils partagent donc leurs idées, leurs analyses, leurs données et leurs résultats.
+
+<br>
+
+Le partage exprime la nécessité d'une communication permanente entre les équipes chargées des développements et celles chargées de l'exploitation.
+
+::right::
+
+<div class="calms-container">
+  <div class="ligne1">
+    <div class="block automation">
+      AUTOMATION
+    </div>
+    <div class="block lean">
+      LEAN
+    </div>
+    <div class="block measurement">
+      MEASUREMENT
+    </div>
+    <div class="block share">
+      SHARE
+    </div>
+  </div>
+  <div class="block culture ligne2">
+    CULTURE
+  </div>
 </div>
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+.calms-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+ 
+  align-items: center;
+  justify-content: center;
+}
+.ligne1 {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 300px;
+}
+.ligne2 {
+  width: 80%;
+  height: 80px;
+}
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.culture {
+  background-color: green;
+  opacity: 0.5;
+}
+.automation {
+  background-color: #FFB612;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.lean {
+  background-color: #A1006B;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.measurement {
+  background-color: #00A1DE;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  opacity: 0.5;
+}
+.share {
+  background-color: red;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+</style>
+
+
+---
+layout: default
+transition: fade-out
+---
+
+# Les Principes Agiles
+
+Tous les principes Agiles sont également à respecter dans le DevOps puisqu’il s’en inspire.
+
+<br>
+
+Attention toutefois sous couvert de la simplicité, certains y justifient le moyen de ne pas respecter les bonnes pratiques de sécurité, de maintenabilité et de disponibilité.
+
+<br>
+
+Ne tombez pas dans ce piège !
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: section
+transition: slide-up
+---
+
+# La boucle de rétroaction
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: image
+image: /assets/images/devops-boucle.webp
+backgroundSize:  70%
+transition: slide-up
+---
+
+# La boucle de rétroaction
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!-- 
+Partie Dev en agilité classique avec un backlog, la planification du sprint et sa réalisation
+Partie CI : avec le build, les tests (unitaires, des intégrations, end to end …) et enfin la création de l’artefact
+Partie CD (déploiement) dans les environnements de test, d’intégration pour tester et enfin livrer sur les env de prod
+ -->
+
+---
+layout: default
+transition: fade-out
+---
+
+# Definition of Done
+
+C'est la liste de critères à vérifier, afin de déterminer si les tickets sont vraiment terminés. 
+
+<br>
+
+Cela peut comporter :
+
+- Un rapport de test réalisé avec succès
+
+<br>
+
+- Un taux de couverture de code respectant les objectifs fixés
+
+<br>
+
+- Un rapport de succès à l'analyse des vulnérabilités des artefacts et des dépendances
+
+<br>
+
+- Une documentation conforme
+
+<br>
+
+- …
+ 
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: section
+transition: slide-up
+---
+
+# Les outils
+
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: iframe
+url: https://landscape.cncf.io/
+transition: slide-up
+---
+
+<!-- une carte qui tente de catégoriser la plupart des projets de technologie native du cloud -->
+
+---
+layout: default
+transition: slide-up
+---
+
+# Les outils d'orchestration de pipeline
+
+<div class="container">
+ <img src="/assets/images/Jenkins_logo.svg.png"></img>
+ <img src="/assets/images/gitlab-ci-cd-logo.png"></img>
+ <img src="/assets/images/GitHub_Invertocat_Logo.svg.png"></img>
+</div>
+
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 80px;
+}
+img {
+  width: 200px;
+}
+</style>
+
+---
+layout: default
+transition: fade-out
+---
+
+# Les autres outils
+
+Comme on l'a vu, il existe de nombreux outils utilisés dans le DevOps.
+
+<br>
+
+- Du stockage des artefacts que ce soit des images de conteneurs, des packages applicatifs, des libraires, ...,
+- Des tests automatisés,
+- Du provisionnement de ressources,
+- De gestion de configuration,
+- De gestion de la sécurité dont celle de la supply chain,
+- De secret management,
+- De monitoring,
+- De gestion des logs,
+- ...
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: section
+transition: slide-up
+---
+
+
+# Les bonnes pratiques
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Rappel
+
+Faites attention à ce que vous trouvez sur internet.
+
+<br>
+
+Tout ce qui est disponible sur internet (et avec les IA) l'est à des fins de démonstrations, voir de formation.
+
+<br>
+
+Il est vidé, pour en faciliter la compréhension, de toute notion de fiabilité, de maintenabilité, d'exploitabilité et de sécurité.
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: image-right
+image: /assets/images/cooper-howard-fallout.gif
+backgroundSize:  70%
+transition: fade-out
+---
+
+# Les bonnes pratiques
+
+Gardez toujours en tête les points suivants, dans la partie dev comme dans la partie ops.
+
+- La sécurité
+- La fiabilité 
+- L’exploitabilité
+- La maintenabilité
+- l’industrialisation
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!-- La sécurité, c'est l'affaire de tous pas d'un seul d'un spécialiste ! Alors, replaçons la sécurité comme une fondation de toute construction.
+indicateurs, haute disponibilité, auto-remédiation…,
+
+NoOps => Génial si tout automatique! mais en pratique si y’a un gros problème on fait comment ?
+
+Sauvegarder, documenter et tester pour pouvoir remettre en service en cas de problème
+
+Industrialiser veut dire sérialiser. Cela veut dire construit de manière cohérente. -->
+
+---
+layout: section
+transition: slide-up
+---
+
+# La veille technologique
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: default
+transition: fade-out
+---
+
+# Les sites de veille
+
+Il existe de nombreux sites de veille technologique. En voici quelques uns que j'utilise régulièrement :
+
+- [Developpez.com](https://www.developpez.com/)
+- [Le journal du hacker](https://www.journalduhacker.net/)
+- [RudeOps](https://rudeops.com/) (mailling liste hebdo)
+- [Human coders](https://news.humancoders.com/)
+- [Quoi de neuf les devs](https://happytodev.substack.com/)
+- …
+
+Pour se former sur les DevOps : [Le blog de Stéphane Robert](https://blog.stephane-robert.info/)
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+---
+layout: section
+transition: slide-up
+---
+
+# Démonstration d'un pipeline de CI/CD
+
+<style>
+h1 {
+  color: #2B90B6;
+}
+</style>
+
+<!-- 
+https://gitlab.com/gitlab-org/gitlab/-/pipelines/
+
+https://gitlab.com/gitlab-org/gitlab/-/pipelines/1559732529 
 -->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
 
 ---
 layout: center
-class: text-center
 ---
+<div class="flex flex-col items-center">
+<h1>Merci de votre attention</h1>
 
-# Learn More
+Retrouvez les diapositives à l'adresse suivante : [https://badroro.github.io/devops-introduction](https://badroro.github.io/devops-introduction)
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div class="flex flex-row items-center container">
+  <LightOrDark>
+    <template #dark>
+      <div class="flex flex-col items-center">
+      <QRCode
+          :width="200"
+          :height="200"
+          type="svg"
+          data="https://badroro.github.io/devops-introduction"
+          :margin="10"
+          :dotsOptions="{ type: 'square', color: 'white' }"
+      />
+      <span>Lien vers les slides</span>
+      </div>
+      <div class="flex flex-col items-center">
+      <QRCode
+          :width="200"
+          :height="200"
+          type="svg"
+          data="https://openfeedback.io/o4cKuvoeESCMKha2QIHs/2024-12-02/FRUMzon5XrlhBdhJBpk3"
+          :margin="10"
+          :dotsOptions="{ type: 'square', color: 'white' }"
+      />
+      <span>Me laisser un feedback</span>
+      </div>
+    </template>
+    <template #light>
+      <QRCode
+          :width="200"
+          :height="200"
+          type="svg"
+          data="https://badroro.github.io/devops-introduction"
+          :margin="10"
+          :dotsOptions="{ type: 'square', color: 'black' }"
+      />
+    </template>
+    <span>Lien vers les slides</span>
+     <QRCode
+          :width="200"
+          :height="200"
+          type="svg"
+          data="https://openfeedback.io/o4cKuvoeESCMKha2QIHs/2024-12-02/FRUMzon5XrlhBdhJBpk3"
+          :margin="10"
+          :dotsOptions="{ type: 'square', color: 'black' }"
+      />
+      <span>Me laisser un feedback</span>
+  </LightOrDark>
+  </div>
+</div>
 
-<PoweredBySlidev mt-10 />
+<style>
+h1 {
+  color: #2B90B6;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+</style>
