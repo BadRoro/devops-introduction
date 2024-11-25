@@ -128,7 +128,7 @@ Contrairement à ITIL ou Agile, le DevOps n’a ni norme ni manifeste, mais repo
 
 Remettons tout de suite les choses en place !
 
-<span v-mark.circle.red="1">Devops n'est pas une méthode, c'est un mouvement, une culture.</span>
+<span v-mark="{at: 1, color: 'red', type: 'circle', padding: 25}">Devops n'est pas une méthode, c'est un mouvement, une culture.</span>
 
 <style>
 h1 {
@@ -223,10 +223,10 @@ Comme on a vu brièvement, les équipes Dev et Ops ont des objectifs différents
 
 <br>
 
-- Les développeurs : en charge d'écrire du code, d'apporter de <span v-mark.blue="1">nouvelles fonctionnalités</span> et de corriger des bugs. Leurs préoccupations : apportés <span v-mark.blue="1">le plus rapidement</span> des <span v-mark.blue="1">changements</span> pour répondre aux besoins du client.
+- Les développeurs : en charge d'écrire du code, d'apporter de <span v-mark="{at: 1, color: '#60a5fa', type: 'underline', padding: 0}">nouvelles fonctionnalités</span> et de corriger des bugs. Leurs préoccupations : apportés <span v-mark="{at: 1, color: '#60a5fa', type: 'underline', padding: 0}">le plus rapidement</span> des <span v-mark="{at: 1, color: '#60a5fa', type: 'underline', padding: 0}">changements</span> pour répondre aux besoins du client.
 
 
-- Les opérations : en charge de créer et de <span v-mark.green="2">maintenir</span> les infrastructures hébergeant ces applications. Leurs préoccupations : <span v-mark.green="2">stabiliser et garantir la disponibilité</span> de celle-ci pour répondre aux exigences du client. Dans les opérationnelles, on trouve les personnes en charge d'administrer, de sécuriser et de connecter les équipements.
+- Les opérations : en charge de créer et de <span v-mark="{at: 2, color: '#49dd80', type: 'underline', padding: 0}">maintenir</span> les infrastructures hébergeant ces applications. Leurs préoccupations : <span v-mark="{at: 2, color: '#49dd80', type: 'underline', padding: 0}">stabiliser et garantir la disponibilité</span> de celle-ci pour répondre aux exigences du client. Dans les opérationnelles, on trouve les personnes en charge d'administrer, de sécuriser et de connecter les équipements.
 
 
 <style>
