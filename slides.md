@@ -24,6 +24,8 @@ mdc: true
 overviewSnapshots: true
 addons:
     - slidev-addon-qrcode
+
+layout: cover
 ---
 
 # Introduction au DevOps
@@ -83,6 +85,7 @@ span {align-self: end;}
 
 ---
 layout: statement
+transition: fade-out
 ---
 
 # C'est quoi le DevOps ?
